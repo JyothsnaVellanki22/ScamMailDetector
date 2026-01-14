@@ -1,0 +1,214 @@
+@import 'primeicons/primeicons.css';
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  /* Deeper Blue Gradient */
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.main-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  max-width: 1200px;
+  width: 90%;
+  padding: 2rem;
+}
+
+/* --- Left Side Content --- */
+.content-side {
+  flex: 1;
+  text-align: left;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.highlight {
+  color: #4facfe;
+  /* Light blue highlight */
+}
+
+.hero-desc {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  opacity: 0.9;
+  margin-bottom: 2rem;
+  max-width: 500px;
+}
+
+.features {
+  display: flex;
+  gap: 20px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.feature-item i {
+  color: #4facfe;
+}
+
+/* --- Right Side Interaction --- */
+.interaction-side {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 500px;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.15);
+  /* Glass effect */
+  backdrop-filter: blur(15px);
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  /* Subtle border for separation */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  color: white;
+  /* White text for contrast */
+}
+
+h1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  /* Space between icon and text */
+  color: white;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.pi-envelope {
+  font-size: 2rem;
+}
+
+textarea {
+  width: 90%;
+  height: 120px;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  border: none;
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  font-size: 1rem;
+  /* Better readability */
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+  resize: none;
+  /* Prevent layout breaking */
+}
+
+button {
+  width: 100%;
+  /* Full width for better alignment */
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 15px;
+  /* Larger hit area */
+  border-radius: 8px;
+  /* Match input radius */
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+/* ... old container styles ... */
+
+h2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  color: white;
+  margin-top: 0;
+  margin-bottom: 1.5rem;
+  font-size: 1.8rem;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .main-wrapper {
+    flex-direction: column;
+    text-align: center;
+    gap: 3rem;
+  }
+
+  .content-side {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+.result {
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: 8px;
+  color: white;
+  animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.spam {
+  background-color: #dc3545;
+}
+
+.ham {
+  background-color: #28a745;
+}
+
+.error {
+  color: #dc3545;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #f8d7da;
+  border-radius: 4px;
+}

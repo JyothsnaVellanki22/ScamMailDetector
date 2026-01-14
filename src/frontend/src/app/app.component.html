@@ -1,0 +1,51 @@
+<div class="main-wrapper">
+
+  <div class="content-side">
+    <h1 class="hero-title">
+      Smart <span class="highlight">Spam</span> Detection
+    </h1>
+    <p class="hero-desc">
+      Protect your inbox from unwanted clutter. Our AI-powered tool analyzes message content in real-time to identify
+      potential spam with 97% accuracy.
+    </p>
+
+    <div class="features">
+      <div class="feature-item">
+        <i class="pi pi-bolt"></i>
+        <span>Instant Analysis</span>
+      </div>
+      <div class="feature-item">
+        <i class="pi pi-shield"></i>
+        <span>Privacy Focused</span>
+      </div>
+      <div class="feature-item">
+        <i class="pi pi-check-circle"></i>
+        <span>High Accuracy</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="interaction-side">
+    <div class="container">
+      <h2><i class="pi pi-envelope"></i> Check Message</h2>
+
+      <div class="card">
+        <textarea [(ngModel)]="message" placeholder="Paste your email/SMS content here..."></textarea>
+
+        <button (click)="checkSpam()" [disabled]="!message">
+          <i class="pi pi-search" style="margin-right: 8px"></i> Analyze Now
+        </button>
+      </div>
+
+      <div *ngIf="result" class="result" [class.spam]="result.is_spam" [class.ham]="!result.is_spam" @fadeInUp>
+        <h3>{{ result.label | uppercase }}</h3>
+        <p>Confidence: {{ result.confidence * 100 | number:'1.2-2' }}%</p>
+      </div>
+
+      <div *ngIf="error" class="error">
+        <i class="pi pi-exclamation-triangle"></i> {{ error }}
+      </div>
+    </div>
+  </div>
+
+</div>
