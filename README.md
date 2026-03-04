@@ -1,4 +1,4 @@
-# 📧 Scam Mail / Spam Detector
+# Spam Mail Detector
 
 [![Angular](https://img.shields.io/badge/Frontend-Angular_17-dd0031?style=flat&logo=angular)](https://angular.io/)
 [![FastAPI](https://img.shields.io/badge/Backend-FastAPI-009688?style=flat&logo=fastapi)](https://fastapi.tiangolo.com/)
@@ -9,7 +9,7 @@ A full-stack machine learning application designed to identify and classify spam
 
 ---
 
-## 🌟 Features
+## Features
 
 *   **Real-time Analysis**: Instantly classifies messages as **Spam** or **Ham** (Not Spam).
 *   **Confidence Scores**: Provides a percentage probability score for every prediction.
@@ -19,7 +19,7 @@ A full-stack machine learning application designed to identify and classify spam
 
 ---
 
-## 🛠️ Tech Stack
+## Tech Stack
 
 ### **Machine Learning & Backend**
 *   **Python 3.13**: Core programming language.
@@ -37,7 +37,7 @@ A full-stack machine learning application designed to identify and classify spam
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 Follow these instructions to set up and run the project locally.
 
@@ -91,7 +91,7 @@ npm install
 
 ---
 
-## ▶️ Running the Application
+## Running the Application
 
 You need to run the Backend and Frontend in separate terminals.
 
@@ -103,18 +103,18 @@ source venv/bin/activate
 # Start the server
 uvicorn src.backend.main:app --reload
 ```
-✅ Server running at: `http://localhost:8000`
+Server running at: `http://localhost:8000`
 
 ### Terminal 2: Frontend
 ```bash
 # Inside src/frontend
 npm start
 ```
-✅ App running at: `http://localhost:4200`
+App running at: `http://localhost:4200`
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
 ├── data/                  # Raw dataset (SMS Spam Collection)
@@ -130,5 +130,5 @@ npm start
 
 ---
 
-## 🤝 Contributing
+## Contributing
 Contributions are welcome! Please feel free to submit a Pull Request.
